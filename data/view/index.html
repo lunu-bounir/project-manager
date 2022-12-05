@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>Project Manager - ToDo List</title>
+</head>
+<body>
+  <notification-view id="toast"></notification-view>
+  <section id="search">
+    <form>
+      <input type="search" required autofocus>
+      <input type="submit" value="Search">
+    </form>
+  </section>
+  <section id="tree">
+    <extended-list-view id="projects">
+      <span width="0"></span> <!-- icon -->
+      <span width="1fr" class="indent">Projects</span>
+      <span width="6ch"></span>
+    </extended-list-view>
+    <div id="projects-tools">
+      <button id="add-project">Add Pr<u>o</u>ject</button>
+      <button id="remove-project">Delete Pr<u>o</u>ject</button>
+    </div>
+  </section>
+  <section id="results">
+    <extended-list-view>
+      <span width="1fr" class="indent">Title</span>
+      <span width="1fr">Tags</span>
+      <span width="1fr">Description</span>
+      <span width="10ch">Project</span>
+      <span width="1fr">Date</span>
+    </extended-list-view>
+  </section>
+  <form id="view">
+    <p id="header">
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="keywords" placeholder="comma-separated list of tags">
+    </p>
+    <textarea id="body" placeholder="Description" required></textarea>
+    <div id="issues-tools">
+      <div>
+        <button type="submit" id="update-issue"><u>U</u>pdate this Issue</button>
+        <button type="submit" id="add-issue"><u>A</u>dd as new Issue</button>
+      </div>
+      <div>
+        <span>Mark as&nbsp;</span>
+        <button id="mark-as-read"><u>R</u>ead</button>
+        <button id="mark-as-unread">Un<u>r</u>ead</button>
+        <button id="mark-as-flagged">Fla<u>g</u>ged</button>
+        <button id="mark-as-unflagged">Unfla<u>g</u>ged</button>
+        <button id="mark-as-pinned"><u>P</u>in</button>
+        <button id="mark-as-unpinned">Un<u>p</u>in</button>
+        <button id="mark-as-complete"><u>C</u>omplete</button>
+      </div>
+      <div>
+        <button type="button" id="delete-issue"><u>D</u>elete</button>
+      </div>
+    </div>
+  </form>
+
+  <script type="text/javascript" src="components/notification-view/notification-view.js"></script>
+  <script type="text/javascript" src="components/list-view/list-view.js"></script>
+  <script type="text/javascript" src="components/list-view/extended-list-view.js"></script>
+  <script type="text/javascript" src="xapian.js"></script>
+  <script type="text/javascript" src="config.js"></script>
+  <script type="text/javascript" src="xapian/xapian_noexception_wasm_db.js"></script>
+  <script type="module" src="index.mjs"></script>
+</body>
+</html>
