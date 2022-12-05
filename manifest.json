@@ -4,6 +4,7 @@
   "name": "Project Manager",
   "description": "A TODO list for multiple projects with powerful search and tag support",
   "offline_enabled": true,
+  "homepage_url": "https://add0n.com/project-manager.html",
   "permissions": [
     "storage",
     "unlimitedStorage"
